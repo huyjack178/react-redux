@@ -6,14 +6,14 @@ import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import './style.scss';
 
 export class Header extends React.Component {
+  onSelected = (selected) => {
+    const to = `/${selected}`;
+    this.props.history.push(to);
+  };
+
   render() {
     return (
-      <SideNav
-        onSelect={(selected) => {
-          const to = `/${selected}`;
-          this.props.history.push(to);
-        }}
-      >
+      <SideNav onSelect={this.onSelected}>
         <SideNav.Toggle />
         <SideNav.Nav defaultSelected="dashboard">
           <NavItem eventKey="dashboard">

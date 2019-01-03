@@ -19,6 +19,7 @@ import {
   LOAD_REPOS,
   LOAD_REPOS_SUCCESS,
   LOAD_REPOS_ERROR,
+  EXPAND_NAVBAR,
 } from './constants';
 
 /**
@@ -59,5 +60,12 @@ export function repoLoadingError(error) {
   return {
     type: LOAD_REPOS_ERROR,
     error,
+  };
+}
+
+export function expandNavBar(isNavBarExpanded) {
+  return {
+    type: EXPAND_NAVBAR,
+    isNavBarExpanded,
   };
 }
