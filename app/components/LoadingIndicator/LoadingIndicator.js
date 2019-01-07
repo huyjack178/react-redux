@@ -1,17 +1,6 @@
 import React from 'react';
 import './style.scss';
 
-const LoadingIndicator = () => (
-  <div className="loading-indicator">
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-  </div>
-);
+const LoadingIndicator = () => <div className="loader border-top-info" />;
 
 export default LoadingIndicator;

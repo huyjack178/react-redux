@@ -27,7 +27,9 @@ import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 
 // Import CSS reset and Global Styles
 import 'styles/theme.scss';
-
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 import configureStore from './configureStore';
 
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
@@ -35,11 +37,14 @@ import configureStore from './configureStore';
 const openSansObserver = new FontFaceObserver('Open Sans', {});
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body
-openSansObserver.load().then(() => {
-  document.body.classList.add('fontLoaded');
-}, () => {
-  document.body.classList.remove('fontLoaded');
-});
+openSansObserver.load().then(
+  () => {
+    document.body.classList.add('fontLoaded');
+  },
+  () => {
+    document.body.classList.remove('fontLoaded');
+  },
+);
 
 // Create redux store with history
 const initialState = {};
@@ -56,7 +61,7 @@ const render = () => {
       </ConnectedRouter>
       {/* </LanguageProvider> */}
     </Provider>,
-    MOUNT_NODE
+    MOUNT_NODE,
   );
 };
 
