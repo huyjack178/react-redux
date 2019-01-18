@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import DashboardPage from 'containers/DashboardPage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import DashboardPage from 'pages/DashboardPage/Loadable';
+import FrontEndPage from 'pages/Configuration/FrontEndPage/Loadable';
+import NotFoundPage from 'pages/NotFoundPage/Loadable';
 import SideNav from 'components/SideNav';
 import NavBar from 'components/NavBar';
 import './style.scss';
@@ -15,7 +15,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={DashboardPage} />
         <Route path="/dashboard" component={DashboardPage} />
-        <Route path="/configuration/frontend" component={FeaturePage} />
+        <Route path="/configuration/frontend" component={FrontEndPage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
     </main>

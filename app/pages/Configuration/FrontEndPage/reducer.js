@@ -15,11 +15,20 @@ import { fromJS } from 'immutable';
 const initialState = fromJS({
   frontEndList: [
     {
+      id: '1',
       name: 'skynex',
       balanceMode: 'http',
       backendName: 'skynex-backend',
       bindAddress: '*',
-      bindPort: '6969'
+      bindPort: '6969',
+    },
+    {
+      id: '2',
+      name: 'skynex',
+      balanceMode: 'http',
+      backendName: 'skynex-backend',
+      bindAddress: '*',
+      bindPort: '6969',
     },
   ],
 });
