@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import DashboardPage from 'pages/DashboardPage/Loadable';
 import FrontEndPage from 'pages/Configuration/FrontEndPage/Loadable';
 import NotFoundPage from 'pages/NotFoundPage/Loadable';
+import UserPage from 'pages/UserPage/Loadable';
 import SideNav from 'components/SideNav';
 import NavBar from 'components/NavBar';
 import './style.scss';
@@ -16,6 +17,7 @@ const App = () => (
         <Route exact path="/" component={DashboardPage} />
         <Route path="/dashboard" component={DashboardPage} />
         <Route path="/configuration/frontend" component={FrontEndPage} />
+        <Route path="/user" component={UserPage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
     </main>
